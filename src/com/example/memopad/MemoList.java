@@ -19,7 +19,17 @@ public class MemoList extends ListActivity
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id)
 	{
-		// TODO Auto-generated method stub
+		memos = new MemoDBHelper(this);
+		SQLiteDatabase db = memos.getWritableDatabase();
+		Cursor cursor = db.query("memoDB", cols,"_ID=" + String.valueOf(id),null, null, null, null);
+		startManagingCursor(cursor);
+		int idx = cursor.getColumnIndex("memo");
+		cursor.moveToFirst();
+		Intent i = new Intent();
+		i.putExtra("text", cursor.getString(idx));
+		setResult(RESULT_OK,i);
+		memos.close();
+		finish();
 		super.onListItemClick(l, v, position, id);
 	}
 
