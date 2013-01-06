@@ -72,7 +72,7 @@ public class MemopadActivity extends Activity
 			if(memo.indexOf("\n")==-1)
 			{
 				title = memo.substring(0, Math.min(memo.length(), 20));
-				
+				//indexOf = -1 is no memo in it
 			}
 			else
 			{
@@ -85,7 +85,8 @@ public class MemopadActivity extends Activity
 		ContentValues values = new ContentValues();
 		values.put("title", title + "\n" + ts);
 		values.put("memo", memo);
-		
+		db.insertOrThrow("memoDB", null, values);
+		memos.close();
 		
 		
 		}//if
