@@ -4,15 +4,17 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
-// provided method and code. before modifining.
+
 public class MemoDBHelper extends SQLiteOpenHelper
 {
+	static final String name = "memos.db";
+	static final int version = 1;
+	static final CursorFactory factory = null;
 
-	public MemoDBHelper(Context context, String name, CursorFactory factory,
-			int version)
+	public MemoDBHelper(Context context)
 	{
 		super(context, name, factory, version);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Override
