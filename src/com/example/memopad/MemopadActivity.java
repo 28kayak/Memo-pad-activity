@@ -1,5 +1,5 @@
 package com.example.memopad;
-//initial memo app which can temporally write data on the memo-pad apps
+//initial memo app which can save written data on the memo-pad apps
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
