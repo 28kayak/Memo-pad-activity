@@ -19,6 +19,11 @@ public class MemopadActivity extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_memopad);
+		
+		EditText et = (EditText) findViewById(R.id.editText);
+		SharedPreferences pref = this.getSharedPreferences("MemoPref", MODE_PRIVATE);
+		et.setText(pref.getString("memo", ""));
+		et.setSelection(pref.getInt("",0));
 	}
 	
 	//onStop method is called before app shuts down, 
