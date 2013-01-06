@@ -12,8 +12,9 @@ import java.text.DateFormat;
 import java.util.Date;
 import android.database.sqlite.SQLiteDatabase;
 import android.content.ContentValues;
+//imports for showing menu and execute menu command
+import android.view.MenuInflater;;
 
-//testing branch git
 
 public class MemopadActivity extends Activity
 {
@@ -58,6 +59,8 @@ public class MemopadActivity extends Activity
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
 		getMenuInflater().inflate(R.menu.activity_memopad, menu);
+		//MenuInflater mi = getMenuInflater();
+		//mi.inflate(R.menu.menu, menu);
 		return true;
 	}
 	
