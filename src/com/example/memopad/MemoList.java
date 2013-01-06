@@ -37,7 +37,7 @@ public class MemoList extends ListActivity
 	protected void onCreate(Bundle savedInstanceState) 
 	{
 		setContentView(R.layout.memolist);
-		showMemos(getMemos());//getMemos() is Undefined.
+		showMemos(getMemos());//getMemos() is Undefined. how can I solve this??
 		super.onCreate(savedInstanceState);
 	}
 
