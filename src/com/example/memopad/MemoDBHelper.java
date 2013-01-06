@@ -16,12 +16,15 @@ public class MemoDBHelper extends SQLiteOpenHelper
 		super(context, name, factory, version);
 		
 	}
-
+	// onCreate() translate to SQL-statement and  make a table of SQLite 
 	@Override
 	public void onCreate(SQLiteDatabase db) 
 	{
-		// TODO Auto-generated method stub
-
+		String sql = "CREATE TABLE memoDB("
+				+ android.provider.BaseColumns._ID
+				+" INTEGER PRIMARY KEY AUTOINCREMENT, title Text, memo Text); " ;
+		db.execSQL(sql);
+		
 	}
 
 	@Override
