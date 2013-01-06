@@ -27,7 +27,7 @@ public class MemoList extends ListActivity
 	protected void onCreate(Bundle savedInstanceState) 
 	{
 		setContentView(R.layout.memolist);
-		showMemos(getMemos());
+		showMemos(getMemos());//getMemos() is Undefined.
 		super.onCreate(savedInstanceState);
 	}
 
